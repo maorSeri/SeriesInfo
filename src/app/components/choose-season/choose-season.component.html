@@ -1,7 +1,6 @@
 <div>
-  <h4>Select Season</h4>
   <mat-form-field appearance="fill">
-    <mat-label>Seasons</mat-label>
+    <mat-label>Select Seaso</mat-label>
     <mat-select [(ngModel)]="selectedSeason">
       <mat-option *ngFor= "let s of this.seasons" [value]="s">
         {{s}}

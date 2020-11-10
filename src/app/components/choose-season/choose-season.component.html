@@ -1,0 +1,9 @@
+<div>
+  <h1>Choose Season</h1>
+  <select [(ngModel)]="selectedSeason">
+    <option *ngFor="let s of this.seasons">
+      {{s}}
+    </option>
+  </select>
+  <button (click)="onSelectSeason()">Select</button>
+</div>

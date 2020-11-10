@@ -1,0 +1,14 @@
+h1 {
+  margin-top: 10px;
+   text-align: center;
+  font: 600 38px/30px Roboto, "Helvetica Neue", sans-serif;
+}
+.k-grid {
+  margin-bottom: 20px;
+}
+
+.mat-button {
+  background-color: gray;
+  float: right;
+  margin-right: 50px;
+}

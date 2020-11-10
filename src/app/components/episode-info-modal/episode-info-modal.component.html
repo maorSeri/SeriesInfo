@@ -1,0 +1,11 @@
+<h1 mat-dialog-title> {{this.title}}</h1>
+<img src="{{this.poster}}">
+<div mat-dialog-content>
+  <p>Runtime: {{this.runtime}}</p>
+  <p>Genre: {{this.genre}}</p>
+  <p>Plot: {{this.plot}}</p>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">OK</button>
+</div>

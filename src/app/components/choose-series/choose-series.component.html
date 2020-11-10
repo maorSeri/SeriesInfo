@@ -1,0 +1,13 @@
+<div>
+  <h1>Choose Series</h1>
+    <select [(ngModel)]="selectedOption">
+      <option *ngFor="let s of this.series">
+        {{s.name}}
+      </option>
+    </select>
+  <button (click)="onSelect()">Select</button>
+  <div *ngIf="this.numOfSeasons">
+    <app-choose-season [selectedSeries]="selectedOption" [numOfSeasons]="this.numOfSeasons"></app-choose-season>
+  </div>
+</div>
+

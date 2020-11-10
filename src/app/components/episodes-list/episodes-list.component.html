@@ -1,0 +1,16 @@
+<div class="my-background">
+  <div>
+    <h1>{{this.seriesName}}</h1>
+    <kendo-grid [data]="gridData" [height]="550" (cellClick)="this.onCellClick($event)">
+      <kendo-grid-column field="Title" title="Title">
+      </kendo-grid-column>
+      <kendo-grid-column field="Released" title="Released">
+      </kendo-grid-column>
+      <kendo-grid-column field="Episode" title="Episode">
+      </kendo-grid-column>
+      <kendo-grid-column field="imdbRating" title="imdbRating">
+      </kendo-grid-column>
+    </kendo-grid>
+    <button mat-button routerLink="">Back to Choose Series</button>
+  </div>
+</div>

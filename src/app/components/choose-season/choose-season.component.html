@@ -1,9 +1,12 @@
 <div>
-  <h1>Choose Season</h1>
-  <select [(ngModel)]="selectedSeason">
-    <option *ngFor="let s of this.seasons">
-      {{s}}
-    </option>
-  </select>
+  <h4>Select Season</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Seasons</mat-label>
+    <mat-select [(ngModel)]="selectedSeason">
+      <mat-option *ngFor= "let s of this.seasons" [value]="s">
+        {{s}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
   <button (click)="onSelectSeason()">Select</button>
 </div>

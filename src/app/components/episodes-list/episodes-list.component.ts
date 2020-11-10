@@ -33,13 +33,11 @@ export class EpisodesListComponent implements OnInit {
     this.seasonNumber = this.route.snapshot.paramMap.get('seasonName');
     this.seriesService.getSeason(this.seriesName, this.seasonNumber)
       .subscribe(season => {
-          console.log(season);
           this.gridData = season.Episodes;
         }
       );
   }
   onCellClick(e): void{
-    console.log(e.dataItem.Episode);
     if (e.columnIndex === 0){
       this.episodeNumber = e.dataItem.Episode;
       this.openDialog();
@@ -49,11 +47,6 @@ export class EpisodesListComponent implements OnInit {
     const dialogRef = this.dialog.open(EpisodeInfoModalComponent, {
       width: '500px',
       data: {seriesName: this.seriesName, seasonNumber: this.seasonNumber , episodeNumber: this.episodeNumber}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      this.animal = result;
     });
   }
 }

@@ -22,7 +22,6 @@ export class SeriesService {
 
   getSeries(seriesName): Observable<SeriesInfo>{
     const url = `${this.omdbUrl}?t=${seriesName}${this.apiKey}`;
-    console.log(url);
     return this.http.get<SeriesInfo>(url);
 
   }
@@ -30,13 +29,11 @@ export class SeriesService {
 
   getSeason(seriesName: string, seriesSeason: string): Observable<SeasonInfo>{
     const url = `${this.omdbUrl}?t=${seriesName}&Season=${seriesSeason}${this.apiKey}`;
-    console.log(url);
     return this.http.get<SeasonInfo>(url);
   }
 
   getEpisode(seriesName: string, seriesSeason: string, episodeNumber: number): Observable<Episode>{
     const url = `${this.omdbUrl}?t=${seriesName}&Season=${seriesSeason}&Episode=${episodeNumber}&plot=full${this.apiKey}`;
-    console.log(url);
     return this.http.get<Episode>(url);
   }
 
